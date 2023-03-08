@@ -17,11 +17,12 @@ class Competence extends Sequelize.Model {
                     allowNull: false,
                 },
                 competence_id: {
-                    type: Sequelize.INTEGER,
+                    type: Sequelize.INTEGER,    
                     allowNull: false,
                 },
                 years_of_experience: {
-                    type: Sequelize.DECIMAL(4, 2),
+                    type: Sequelize.DOUBLE,
+                    defaultValue: 0,
                     allowNull: true,
                 },
             },

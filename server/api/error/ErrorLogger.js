@@ -1,4 +1,4 @@
-const ErrorHandler = require('../RequestHandler');
+const ErrorHandler = require('../requestHandler');
 class ErrorLogger extends ErrorHandler {
     constructor() {
         super()

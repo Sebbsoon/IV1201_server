@@ -1,7 +1,10 @@
 
 const PersonApi = require('./PersonApi');
+const ApplicationApi = require('./ApplicationApi');
 const ErrorLogger = require('./error/ErrorLogger');
 const ErrorResponseSender = require('./error/ErrorResponseSender');
+const ProtectedApi = require('./ProtectedApi');
+
 
 class RequestHandlerLoader {
     constructor() {
@@ -32,6 +35,8 @@ class RequestHandlerLoader {
 }
 const loader = new RequestHandlerLoader();
 loader.addRequestHandler(new PersonApi());
+loader.addRequestHandler(new ApplicationApi());
+loader.addRequestHandler(new ProtectedApi());
 loader.addErrorHandler(new ErrorLogger());
 loader.addErrorHandler(new ErrorResponseSender());
 module.exports = loader;
