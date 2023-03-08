@@ -8,10 +8,7 @@ const AvailabilityDTO = require('../model/AvailabilityDTO');
 const Competence = require('../model/Competence');
 const CompetenceDTO = require('../model/CompetenceDTO');
 const Validators = require('../util/Validators');
-const { findAll, sequelize } = require('../model/Person');
-const { where } = require('sequelize');
 const Application = require('../model/Application');
-
 const WError = require('verror').WError;
 
 class ProjectDAO {
